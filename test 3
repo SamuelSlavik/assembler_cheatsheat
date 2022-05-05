@@ -1,0 +1,52 @@
+push ebp
+
+    mov ebp, esp
+
+    fld dword [ebp + 12]
+
+    push __float32__(7.950)
+
+    fld dword [esp]
+
+    pop eax
+
+    faddp
+
+    fsqrt
+
+    fld dword [ebp + 8]
+
+    fldpi
+
+    fmulp
+
+    
+    fld dword [ebp + 12]
+    faddp
+
+    fcos
+
+    faddp
+
+    fld dword [ebp + 8]
+
+    push dword 8
+
+    fild dword [esp]
+
+    pop eax
+
+    fdivp
+
+    fld dword [ebp + 12]
+
+    faddp
+
+
+    fdivp
+
+    mov esp, ebp
+
+    pop ebp
+
+    ret
